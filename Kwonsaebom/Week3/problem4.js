@@ -1,7 +1,6 @@
 // https://www.acmicpc.net/problem/11000
 
 const fs = require("fs");
-const fs = require("fs");
 const input = fs.readFileSync("/dev/stdin").toString().trim().split("\n");
 
 const classes = input
