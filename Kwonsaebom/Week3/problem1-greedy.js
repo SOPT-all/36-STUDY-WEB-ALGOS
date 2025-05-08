@@ -2,7 +2,7 @@
 
 const fs = require("fs");
 const input = fs
-  .readFileSync("input.txt", "utf-8")
+  .readFileSync("/dev/stdin", "utf-8")
   .toString()
   .trim()
   .split("\n");
