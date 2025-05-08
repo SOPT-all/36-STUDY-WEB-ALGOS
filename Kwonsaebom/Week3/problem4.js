@@ -1,25 +1,25 @@
-// https://www.acmicpc.net/problem/11000
+https://www.acmicpc.net/problem/11000
 
 const fs = require("fs");
 const input = fs.readFileSync("/dev/stdin").toString().trim().split("\n");
 
-const classes = input
-  .slice(1)
-  .map((oneClass) => oneClass.split(" ").map(Number));
+const N = Number(input[0]);
+const classes = input.slice(1).map((line) => line.split(" ").map(Number));
 
-classes.sort((a, b) => a[0] - b[0]);
+const startTimes = classes.map((c) => c[0]).sort((a, b) => a - b);
+const endTimes = classes.map((c) => c[1]).sort((a, b) => a - b);
 
-const endTimes = [];
+let roomCount = 0;
+let endIdx = 0;
 
-for (let i = 0; i < classes.length; i++) {
-  const [start, end] = classes[i];
-
-  // 가장 빨리 끝나는 강의실부터 확인
-  // 종료 시간이 가장 빠른 방이 현재 수업 시작 시간보다 같거나 이르면 재사용
-  if (endTimes.length > 0 && endTimes[0] <= start) {
-    endTimes.shift(); // 재사용
+for (let i = 0; i < N; i++) {
+  // 시작 시간이 종료 시간보다 빠르면 → 새 강의실 필요
+  if (startTimes[i] < endTimes[endIdx]) {
+    roomCount++;
+  } else {
+    // 종료 시간이 지난 강의실은 재사용 가능
+    endIdx++;
   }
-
-  endTimes.push(end);
-  endTimes.sort((a, b) => a - b); // 항상 가장 빠르게 끝나는 강의가 먼저
 }
+
+console.log(roomCount);
