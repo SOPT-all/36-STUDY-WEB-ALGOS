@@ -2,8 +2,10 @@
 using namespace std;
 
 int main() {
+    //기본 입력
     int N;
     cin >> N;
+    // 알고리즘
 
     int count = 0;
 

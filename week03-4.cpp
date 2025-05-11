@@ -6,6 +6,7 @@
 using namespace std;
 // 힙 사용.. 끝났을 때 다음 회의 시작 가능하면 ㄱ , 아니면 새 강의실,크기가 즉 강의실 개수
 int main() {
+    //기본 입력
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
@@ -17,6 +18,7 @@ int main() {
         cin >> lectures[i].first >> lectures[i].second;
     }
 
+    // 알고리즘
 
     sort(lectures.begin(), lectures.end());
 

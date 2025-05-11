@@ -12,6 +12,7 @@ bool compare(pair<int, int> a, pair<int, int> b) {
 }
 
 int main() {
+    //기본 입력
     int N;
     cin >> N;
 
@@ -20,6 +21,7 @@ int main() {
     for (int i = 0; i < N; ++i) {
         cin >> meetings[i].first >> meetings[i].second;
     }
+    // 알고리즘
 
     sort(meetings.begin(), meetings.end(), compare);
 

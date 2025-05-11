@@ -3,9 +3,11 @@
 using namespace std;
 // -뒤에 다 묶기 - 만날때까지
 int main() {
+    //기본 입력
     string s;
     cin >> s;
 
+    // 알고리즘
     int result = 0, num = 0;
     bool minus = false;
 
