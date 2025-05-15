@@ -3,7 +3,7 @@
 const fs = require("fs");
 const input = fs.readFileSync("/dev/stdin").toString().trim().split("\n");
 
-const [dmNumber, bmNumber] = input[0].split(" ").map(Number);
+const dmNumber = Number(input[0].split(" ")[0]);
 
 const dmPerson = input.slice(1, 1 + dmNumber);
 const bmPerson = input.slice(1 + dmNumber);
@@ -20,6 +20,6 @@ for (let person of bmPerson) {
 result.sort();
 
 console.log(result.length);
-for (r of result) {
+for (let r of result) {
   console.log(r);
 }
