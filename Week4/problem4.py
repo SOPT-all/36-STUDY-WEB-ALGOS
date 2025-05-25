@@ -1,17 +1,14 @@
 # https://www.acmicpc.net/problem/2231
 
-import sys
-from collections import Counter
+N = int(input())
 
-input = sys.stdin.readline
+def get_decomposition_sum(x):
+    return x + sum(map(int, str(x)))
 
-n = int(input())
-card = list(map(int, input().split()))
+result = 0
+for i in range(1, N):
+    if get_decomposition_sum(i) == N:
+        result = i
+        break
 
-m = int(input())
-tg = list(map(int, input().split()))
-
-counter = Counter(card)
-
-result = [str(counter[tg]) for tg in tg]
-print(' '.join(result))
+print(result)
