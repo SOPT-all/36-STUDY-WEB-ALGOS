@@ -9,9 +9,9 @@ n = int(input())
 card = list(map(int, input().split()))
 
 m = int(input())
-tg = list(map(int, input().split()))
+tgs = list(map(int, input().split()))
 
 counter = Counter(card)
 
-result = [str(counter[tg]) for tg in tg]
+result = [str(counter[tg]) for tg in tgs]
 print(' '.join(result))
