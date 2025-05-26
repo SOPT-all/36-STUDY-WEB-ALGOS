@@ -35,7 +35,15 @@ int main() {
     }
     //알고리즘
     sort(cards.begin(), cards.end());
-    vector<int> result(m);
+
+    for (int i = 0; i < m; ++i) {
+        int x = queries[i];
+        int lower = lower_bound(cards.begin(), cards.end(), x) - cards.begin();
+        int upper = upper_bound(cards.begin(), cards.end(), x) - cards.begin();
+        cout << (upper - lower) << " ";
+    }
+
+    cout << '\n';
 
     //출력
     cout << '\n';
