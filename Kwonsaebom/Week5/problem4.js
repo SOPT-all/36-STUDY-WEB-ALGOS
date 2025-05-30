@@ -14,6 +14,7 @@ for (let i = 0; i < n; i++) {
   }
   visited.push(row);
 }
+
 const dx = [0, 0, -1, 1];
 const dy = [-1, 1, 0, 0];
 
