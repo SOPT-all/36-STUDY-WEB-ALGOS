@@ -27,5 +27,5 @@ def dfs(v):
             count += dfs(next_node)
     return count
 
-# 자기를 제외한 첫번째부터 시작작
+# 자기를 제외한 첫번째부터 시작
 print(dfs(1) - 1)
