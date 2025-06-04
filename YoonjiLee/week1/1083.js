@@ -40,3 +40,4 @@ while (S > 0 && position < N - 1) {
 }
 
 console.log(arr.join(" "));
+
